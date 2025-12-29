@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud REPUBLIC - Smart Cloud Infrastructure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css">
+    <link href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquareNeo/nanumsquareneo.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Galmuri11';
+            src: url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/Galmuri11.woff2') format('woff2');
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Galmuri11', 'SUIT', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* NanumSquare Neo Utility Class */
+        .font-neo {
+            font-family: 'NanumSquareNeo', sans-serif;
+        }
+
+        .glass {
+            background: rgba(15, 15, 15, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .floating {
+            animation: floating 4s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes drift {
+            0% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0, 0) scale(1); }
+        }
+
+        @keyframes server-pulse {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+        }
+
+        .animate-server-pulse {
+            animation: server-pulse 2s ease-in-out infinite;
+        }
+
+        .animate-drift {
+            animation: drift 20s ease-in-out infinite;
+        }
+
+        .animate-drift-slow {
+            animation: drift 35s ease-in-out infinite reverse;
+        }
+
+        /* Page Transition Animation */
+        .animate-slide-in-right {
+            animation: slideInRight 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #444;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
